@@ -9,10 +9,17 @@ Export [Things](https://culturedcode.com/things/) projects and all their tasks t
 
 ## Installation
 
+### macOS via Homebrew
+
+```shell
+brew install cdzombak/oss/things2md
+```
+
+### Manual download from this repo
+
 ```bash
-# Download the single file
-curl -O https://raw.githubusercontent.com/your-repo/things2md
-chmod +x things2md
+curl -O https://raw.githubusercontent.com/cdzombak/things2md/things2md.py
+chmod +x things2md.py
 ```
 
 ## Usage
@@ -55,7 +62,6 @@ Project description and notes go here.
   More notes here
 ```
 
-
 ## Examples
 
 ```bash
@@ -78,3 +84,11 @@ done
 **Permission Errors**: Allow access when macOS prompts for Things 3 permissions.
 
 **Empty Output**: Ensure the project contains tasks.
+
+## License
+
+GNU GPL v3; see [LICENSE](LICENSE) in this repo.
+
+## Author
+
+[Chris Dzombak](https://www.dzombak.com) ([GitHub: @cdzombak](https://www.github.com/cdzombak))
