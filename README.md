@@ -1,6 +1,6 @@
 # things2md
 
-Export Things 3 projects and all their tasks to well-formatted Markdown. Captures project details, task information, notes, tags, due dates, and completion status with proper formatting.
+Export [Things](https://culturedcode.com/things/) projects and all their tasks to well-formatted Markdown. Captures project details, task information, notes, tags, due dates, and completion status with proper formatting.
 
 ## Requirements
 
@@ -11,27 +11,25 @@ Export Things 3 projects and all their tasks to well-formatted Markdown. Capture
 
 ```bash
 # Download the single file
-curl -O https://raw.githubusercontent.com/your-repo/things2md.py
-chmod +x things2md.py
+curl -O https://raw.githubusercontent.com/your-repo/things2md
+chmod +x things2md
 ```
 
 ## Usage
 
 ```bash
 # Export to stdout
-./things2md.py "My Project Name"
+./things2md "My Project Name"
 
 # Export to file
-./things2md.py "My Project Name" > project.md
+./things2md "My Project Name" > project.md
 
 # Export and copy to clipboard
-./things2md.py "My Project Name" | pbcopy
+./things2md "My Project Name" | pbcopy
 
 # Show help
-./things2md.py --help
+./things2md --help
 ```
-
-
 
 ## Output Format
 
@@ -50,7 +48,7 @@ Project description and notes go here.
 - Task Name *(tag1, tag2)*
   Task notes with proper indentation
   Multiple lines are handled correctly
-  
+
   Even with empty lines between
 
 - Another Task
@@ -63,14 +61,14 @@ Project description and notes go here.
 ```bash
 # Export multiple projects
 for project in "Project A" "Project B" "Project C"; do
-    ./things2md.py "$project" > "${project// /_}.md"
+    ./things2md "$project" > "${project// /_}.md"
 done
 
 # Convert to PDF using pandoc
-./things2md.py "Project Name" | pandoc -o project.pdf
+./things2md "Project Name" | pandoc -o project.pdf
 
 # View in your markdown editor
-./things2md.py "Project Name" | open -f -a "Typora"
+./things2md "Project Name" | open -f -a "Typora"
 ```
 
 ## Troubleshooting
