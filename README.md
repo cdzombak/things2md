@@ -26,16 +26,16 @@ chmod +x things2md.py
 
 ```bash
 # Export to stdout
-./things2md "My Project Name"
+things2md "My Project Name"
 
 # Export to file
-./things2md "My Project Name" > project.md
+things2md "My Project Name" > project.md
 
 # Export and copy to clipboard
-./things2md "My Project Name" | pbcopy
+things2md "My Project Name" | pbcopy
 
 # Show help
-./things2md --help
+things2md --help
 ```
 
 ## Output Format
@@ -67,14 +67,14 @@ Project description and notes go here.
 ```bash
 # Export multiple projects
 for project in "Project A" "Project B" "Project C"; do
-    ./things2md "$project" > "${project// /_}.md"
+    things2md "$project" > "${project// /_}.md"
 done
 
 # Convert to PDF using pandoc
-./things2md "Project Name" | pandoc -o project.pdf
+things2md "Project Name" | pandoc -o project.pdf
 
 # View in your markdown editor
-./things2md "Project Name" | open -f -a "Typora"
+things2md "Project Name" | open -f -a "Typora"
 ```
 
 ## Troubleshooting
